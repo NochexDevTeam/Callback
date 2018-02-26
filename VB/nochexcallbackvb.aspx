@@ -22,7 +22,7 @@
         'readable.SetValue(nvc, False, Nothing)
         'nvc("order_id") = "1"
         'readable.SetValue(nvc, True, Nothing)
-        Dim toEmail As String = nvc("merchant_id")'"james.lugton@nochex.com"
+        Dim toEmail As String = nvc("merchant_id")
         ' Get all the POST details from the NameValueCollection and convert to String
         Dim postdetails As String = nvc.ToString
         
@@ -126,7 +126,7 @@
 		' Sender of the Email.
         mail.From = New Net.Mail.MailAddress("apc@nochex.com")
 		' Receipient of the Email.
-		mail.To.Add("james.lugton@nochex.com") 
+		mail.To.Add(""+ toEmail +"") 
 		' Subject of the email, displayed if the response is not declined or authorised.
         mail.Subject = "Error"	
 		' The body of the email will be the error message.
